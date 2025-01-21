@@ -100,6 +100,8 @@
 		else {
 			echo '<BR>';
 			//ech $_GET["name"];
+			$_GET["name"] = preg_replace("/</","&lt", $_GET["name"]);
+			$_GET["name"] = preg_replace("/>/","&gt", $_GET["name"]);
 			echo $_GET["name"];
 		}
 		
