@@ -100,7 +100,8 @@
 		else {
 			echo '<BR>';
 			$name = strtolower($_GET["name"]);
-			
+			$name = preg_replace("/</","&lt", $name);
+			$name = preg_replace("/>/","&gt", $name);
 			$name = preg_replace("/<script>/","", $name);
 			$name = preg_replace("/<\/script>/","", $name);
 			
